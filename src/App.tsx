@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Converter } from "./components/Converter";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="main-container">
+        <div className="upper-container">
+          <img src="./logo.png" alt="hatch" className="logo" />
+          <h1 className="header">Convert currencies in Real-time.</h1>
+        </div>
+        <Converter />
+        <div className="footer-container">
+          <div className="statment">
+            1 EUR = <br /> <span>1.12392 USD</span>
+          </div>
+          <div className="history">View conversion history</div>
+        </div>
+      </div>
     </div>
   );
 }
