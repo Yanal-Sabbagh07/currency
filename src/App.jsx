@@ -16,7 +16,6 @@ function App() {
   useEffect(() => {
     axios.get(BASE_URL).then((res) => {
       setRates(res.data.rates);
-      console.log(res.data.rates);
     });
   }, []);
 
