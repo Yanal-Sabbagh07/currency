@@ -4,14 +4,20 @@ import { Converter } from "./components/Converter";
 import axios from "axios";
 import "./App.css";
 
-const HomePage = () => {
+const HomePage = (props) => {
   const [amount, setAmount] = useState(1.0);
   const [currencyFrom, setCrrencyFrom] = useState("USDEUR");
   const [currencyTo, setCrrencyTo] = useState("USDUSD");
   const [rates, setRates] = useState([]);
   const [result, setResult] = useState(1.104058);
   const [submitted, setSubmittd] = useState(false);
-  const [transitions, setTransition] = useState([]);
+  const date = new Date();
+  const month = date.getUTCMonth() + 1;
+  const day = date.getUTCDate();
+  const year = date.getUTCFullYear();
+
+  const newdate = day + "/" + month + "/" + year;
+
   const BASE_URL =
     "http://apilayer.net/api/live?access_key=fe55a03e9133a90af4c38d2f722a28af";
   useEffect(() => {
@@ -23,15 +29,21 @@ const HomePage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmittd(true);
-    setTransition((preValues) => {
+    props.setTransition((preValues) => {
       return [
         ...preValues,
-        { amount: amount, from: currencyFrom, to: currencyTo, res: result },
+        {
+          date: newdate,
+          amount: amount,
+          from: currencyFrom,
+          to: currencyTo,
+          res: result,
+        },
       ];
     });
-    console.log(transitions);
-    localStorage.setItem("transitons", JSON.stringify(transitions));
+    localStorage.setItem("transitons", JSON.stringify(props.transitions));
   };
+
   function handleAmountChange(amount) {
     setResult((amount * rates[currencyTo]) / rates[currencyFrom]);
     setAmount(amount);

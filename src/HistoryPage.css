@@ -1,10 +1,10 @@
 .history-container {
-  width: 100vw;
-  height: 100vh;
+  max-width: 100vw;
+  min-height: 100vh;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
   background-color: #1a1a1a;
 }
 .table {
@@ -19,11 +19,10 @@
 .table-head {
   width: 90%;
   height: 75px;
-
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding-right: 100px;
+  padding-right: 40px;
   color: #f2f2f2;
   margin-top: 50px;
   margin-bottom: 10px;
@@ -38,4 +37,11 @@
   align-items: center;
   justify-content: space-around;
   margin-bottom: 25px;
+}
+.go-back {
+  outline: none;
+  text-decoration: none;
+  color: #858585;
+  margin-left: 5%;
+  margin-top: 2.5%;
 }
