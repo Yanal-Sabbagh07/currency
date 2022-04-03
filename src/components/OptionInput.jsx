@@ -9,7 +9,7 @@ const OptionInput = (props) => {
     >
       {props.rates.map((currency) => (
         <option key={currency} value={currency}>
-          {currency}
+          {currency.substring(3)}
         </option>
       ))}
     </select>
