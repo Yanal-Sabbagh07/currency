@@ -12,7 +12,7 @@ const HistoryPage = () => {
   if (transitions) {
     return (
       <div className="history-container">
-        <img src="./logo.png" alt="hatch" className="logo" />
+        <img src={require("./images/logo.png")} alt="hatch" className="logo" />
         <Link to="/" className="go-back">
           Go Back
         </Link>

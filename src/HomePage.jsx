@@ -70,7 +70,11 @@ const HomePage = (props) => {
       <div className="App">
         <div className="main-container">
           <div className="upper-container">
-            <img src="./logo.png" alt="hatch" className="logo" />
+            <img
+              src={require("./images/logo.png")}
+              alt="hatch"
+              className="logo"
+            />
             <h1 className="header">Convert currencies in Real-time.</h1>
           </div>
           <Converter
