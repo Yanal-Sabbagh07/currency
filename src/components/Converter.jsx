@@ -13,6 +13,7 @@ export const Converter = (props) => {
         rates={Object.keys(props.rates)}
         onCurrencyChangeFrom={props.onCurrencyChangeFrom}
         onCurrencyChangeTo={props.onCurrencyChangeTo}
+        onCurrencySwitch={props.onCurrencySwitch}
       />
       <Button />
     </form>

@@ -30,18 +30,21 @@
 .table-row {
   color: #f2f2f2;
   background-color: #343434;
-  border-radius: 10px;
   width: 90%;
   height: 75px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin-bottom: 25px;
+
+  border-radius: 15px;
+  background-color: #353535;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
 }
 .go-back {
   outline: none;
   text-decoration: none;
   color: #858585;
   margin-left: 5%;
-  margin-top: 2.5%;
+  margin-top: 60px;
 }

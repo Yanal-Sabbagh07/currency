@@ -59,6 +59,11 @@ const HomePage = (props) => {
     setCrrencyTo(currencyTo);
     setSubmittd(false);
   }
+  function handleCurrencySwitch(currencyFrom, currencyTo) {
+    setResult((amount * rates[currencyFrom]) / rates[currencyTo]);
+    setCrrencyTo(currencyFrom);
+    setCrrencyFrom(currencyTo);
+  }
 
   if (rates) {
     return (
@@ -78,6 +83,7 @@ const HomePage = (props) => {
             onAmountChange={handleAmountChange}
             onCurrencyChangeFrom={handleCurrencyFromChange}
             onCurrencyChangeTo={handleCurrencyToChange}
+            onCurrencySwitch={handleCurrencySwitch}
             onSubmitted={handleSubmit}
           />
           <div className="footer-container">
