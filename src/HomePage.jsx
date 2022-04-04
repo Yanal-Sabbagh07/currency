@@ -6,8 +6,8 @@ import "./App.css";
 
 const HomePage = (props) => {
   const [amount, setAmount] = useState(1.0);
-  const [currencyFrom, setCrrencyFrom] = useState("USDEUR");
-  const [currencyTo, setCrrencyTo] = useState("USDUSD");
+  const [currencyFrom, setCrrencyFrom] = useState("EUR");
+  const [currencyTo, setCrrencyTo] = useState("USD");
   const [rates, setRates] = useState([]);
   const [result, setResult] = useState(1.104058);
   const [submitted, setSubmittd] = useState(false);
@@ -19,10 +19,10 @@ const HomePage = (props) => {
   const newdate = day + "/" + month + "/" + year;
 
   const BASE_URL =
-    "http://apilayer.net/api/live?access_key=fe55a03e9133a90af4c38d2f722a28af";
+    "https://v6.exchangerate-api.com/v6/19081e345e016284206097b9/latest/USD";
   useEffect(() => {
     axios.get(BASE_URL).then((res) => {
-      setRates(res.data.quotes);
+      setRates(res.data.conversion_rates);
     });
   }, []);
 
@@ -93,9 +93,9 @@ const HomePage = (props) => {
           <div className="footer-container">
             {submitted === true ? (
               <div className="statment">
-                {amount} {currencyFrom.substring(3)} = <br />
+                {amount} {currencyFrom} = <br />
                 <span>
-                  {result} {currencyTo.substring(3)}
+                  {result} {currencyTo}
                 </span>
               </div>
             ) : (
