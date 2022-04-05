@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+# Currency Converter:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Is an application that converts currency rates between EUR, USD and CHF (all ways).
+The Application is mainly composed of 2 Views:
 
-## Available Scripts
+- A form including the value to convert from and to currencies. Submitting
+  the form will show the result of the conversion but will also save the
+  value from and to as well as the result in the LocalStorage.
 
-In the project directory, you can run:
+- A table with the history of all currency conversions.
 
-### `npm start`
+## Technologies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+A list of technologies used within the project:
 
-### `npm test`
+- [React]: Version ^18.0.0
+- [react-router-dom"]: Version ^6.2.1
+- [axios]: Version ^0.26.1
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## URL
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You can reach the app on http://yanal-sabbagh07.github.io/currency
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+$ git clone https://github.com/Yanal-Sabbagh07/currency.git
+$ cd ../path/to/the/file
+$ npm install
+$ npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Collaboration
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+You can reach the app on http://yanal-sabbagh07.github.io/currency
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> You can fill the form by adding the Amount that you want to convert, choosing the source currency, and the currency you want to convert to.
+> By pressing convert you will be able to see the conversion result, and your conversion is saved to the local storage.
+> You can switch the currencies by clicking on the switcher icon.
+> The result will disappear when you start making changes to the form, so you need to press convert again when you're done editin.
+> you can also see all the conversions that you have made by clicking on the View conversion history Button.
+> you can also Go back to the conversion page by pressing the Go Back Button.

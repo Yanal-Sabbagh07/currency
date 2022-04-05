@@ -28,11 +28,11 @@ const HistoryPage = () => {
                 {item.date}
               </div>
               <div className="table-from" key={item.index}>
-                {item.amount} {item.from.substring(3)}
+                {item.amount} {item.from}
               </div>
 
               <div className="table-result" key={item.index}>
-                {item.res.toFixed(4)} {item.to.substring(3)}
+                {item.res.toFixed(4)} {item.to}
               </div>
             </div>
           ))}

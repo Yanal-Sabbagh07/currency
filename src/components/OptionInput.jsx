@@ -7,11 +7,16 @@ const OptionInput = (props) => {
       onChange={(e) => props.onCurrencyChange(e.target.value)}
       value={props.default}
     >
-      {props.rates.map((currency) => (
-        <option key={currency} value={currency}>
-          {currency}
-        </option>
-      ))}
+      {props.rates
+        .filter(
+          (currency) =>
+            currency === "USD" || currency === "EUR" || currency === "CHF"
+        )
+        .map((currency) => (
+          <option key={currency} value={currency}>
+            {currency}
+          </option>
+        ))}
     </select>
   );
 };
