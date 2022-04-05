@@ -9,6 +9,7 @@ const HistoryPage = () => {
     data = JSON.parse(data);
     setTransition(data);
   }, []);
+
   if (transitions) {
     return (
       <div className="history-container">
@@ -23,15 +24,13 @@ const HistoryPage = () => {
             <label className="to">to</label>
           </div>
           {transitions.map((item, index) => (
-            <div className="table-row" key={item.index}>
-              <div className="table-amount" key={item.index}>
-                {item.date}
-              </div>
-              <div className="table-from" key={item.index}>
+            <div className="table-row" key={index}>
+              <div className="table-amount">{item.date}</div>
+              <div className="table-from">
                 {item.amount} {item.from}
               </div>
 
-              <div className="table-result" key={item.index}>
+              <div className="table-result">
                 {item.res.toFixed(4)} {item.to}
               </div>
             </div>

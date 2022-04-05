@@ -95,7 +95,7 @@ const HomePage = (props) => {
               <div className="statment">
                 {amount} {currencyFrom} = <br />
                 <span>
-                  {result} {currencyTo}
+                  {result.toFixed(4)} {currencyTo}
                 </span>
               </div>
             ) : (

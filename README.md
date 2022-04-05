@@ -11,27 +11,13 @@ The Application is mainly composed of 2 Views:
 
 ## Technologies
 
----
-
 A list of technologies used within the project:
 
 - [React]: Version ^18.0.0
 - [react-router-dom"]: Version ^6.2.1
 - [axios]: Version ^0.26.1
 
----
-
-## URL
-
----
-
-You can reach the app on http://yanal-sabbagh07.github.io/currency
-
----
-
 ## Installation
-
----
 
 ```
 $ git clone https://github.com/Yanal-Sabbagh07/currency.git
@@ -48,9 +34,9 @@ You can reach the app on http://yanal-sabbagh07.github.io/currency
 
 ---
 
-> You can fill the form by adding the Amount that you want to convert, choosing the source currency, and the currency you want to convert to.
-> By pressing convert you will be able to see the conversion result, and your conversion is saved to the local storage.
-> You can switch the currencies by clicking on the switcher icon.
-> The result will disappear when you start making changes to the form, so you need to press convert again when you're done editin.
-> you can also see all the conversions that you have made by clicking on the View conversion history Button.
-> you can also Go back to the conversion page by pressing the Go Back Button.
+> - You can fill the form by adding the Amount that you want to convert, choosing the source currency, and the currency you want to convert to.
+> - By pressing convert you will be able to see the conversion result, and your conversion is saved to the local storage.
+> - You can switch the currencies by clicking on the switcher icon.
+> - The result will disappear when you start making changes to the form, so you need to press convert again when you're done editin.
+> - you can also see all the conversions that you have made by clicking on the View conversion history Button.
+> - you can also Go back to the conversion page by pressing the Go Back Button.

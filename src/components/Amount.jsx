@@ -9,6 +9,8 @@ const Amount = (props) => {
         type="number"
         value={props.amount}
         onChange={(e) => props.onAmountChange(e.target.value)}
+        min="1"
+        required
       />
     </div>
   );
